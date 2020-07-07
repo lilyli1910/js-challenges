@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <!--Use Bootstrap to decorate the buttons-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Lily's Javascript Page</title>
+</head>
+<body>
+    <div class="container-1">
+        <h2>Challenge 1: Your Age in Days</h2>
+        <!--flex box containers auto calculates the dimensions and readjusts the content accordingly-->
+        <div class="flex-box-container-0">
+            <div>
+                <h4> What year were you born in?</h4>
+            </div>
+            
+            <div>
+                <input id="birthYear" placeholder="Enter Answer">
+            </div>
+        </div>
+
+        <div id = "flex-box-result"></div>
+
+
+        <div class="flex-box-container-1">
+             <!--Button classes from bootstrap & also inner boxes with div-->
+             <div> 
+                <button class = "btn btn-primary" onclick = "ageInDays()">Click Me</button>
+            </div>
+            <div>
+                <button class = "btn btn-danger" onclick = "reset()">Reset </button>
+            </div>
+        </div> 
+        <div class="flex-box-container-0"> </div>
+    </div>   
+
+    <div class="container-2">
+        <h2>Challenge 2: Cat Generator </h2>
+
+        <div class="flex-box-container-2">
+            <!--Button classes from bootstrap & also inner boxes with div-->
+            <div> 
+               <button id="cat-button" class = "btn btn-success" onclick = "randomCat()"> Generate </button>
+            </div>
+            <div>
+                <button class = "btn btn-danger" onclick = "clearCat()">Clear </button>
+            </div>
+        </div> 
+
+       <!--website that has an API generate random pictures of cats-->
+        <div id="random-cat" class="flex-box-container-2"> </div>
+    </div>
+
+    <div class="container-3">
+        <h2>Challenge 3: Rock Paper Scissors!</h2>
+        <div class="flex-box-rps" id="flex-box-rps-div">
+            <img id="rock" src="rock-paper-scissor/rock.png" alt="rock" onclick="rpsGame(this)">
+            <img id="paper" src="rock-paper-scissor/paper.png" alt="paper" onclick="rpsGame(this)">
+            <img id="scissors" src="rock-paper-scissor/scissors.png" alt="scissors" onclick="rpsGame(this)">
+        </div>
+        <div class="flex-box-rps-result" id="flex-box-rps-frontend" style="display: none;"></div>
+        <div class = "flex-box-rps-result" id="flex-box-rps-playagain" style="display: none;"> </div>
+           <!-- <button class = "btn btn-info" onclick = "rpsReset()">Play Again</button> -->
+    </div>
+    <script src = "script.js"></script>
+</body>
+</html>
